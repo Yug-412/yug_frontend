@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            height: 500px;
+            background-size: cover;
+            background-image:url(/img/img.webp);
+            background-repeat: no-repeat;
+        } */
+        body {
+          
+    position: relative;
+   
+    height: 100vh; /* Adjust height as needed */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/img.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   /* Make sure the image is behind the overlay */
+}
+
+.overlay {
+    position: relative;
+  /* Make sure the overlay is above the image */
+    background-color: rgba(189, 52, 52, 0.252); /* Your color with transparency */
+    height: 100%; /* Fill the body */
+}
+ 
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+</body>
+</html>
