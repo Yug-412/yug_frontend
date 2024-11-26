@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nav {
+        display: flex;
+        list-style: none;
+      }
+      .navli {
+        background-color: aqua;
+        padding: 10px;
+        margin: 0px 10px;
+        position: relative;
+      }
+      .li {
+        list-style: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding-left: 10px;
+        background-color: rgb(103, 61, 240);
+        color: rgb(5, 4, 4);
+        display: none;
+      }
+      .li-list {
+       position: relative;
+ 
+      }
+      .li1{
+        position: absolute;
+        list-style: none;
+        left: 10px;
+        top: 0%;
+        background-color:aliceblue;
+       padding-left:5px ;
+       margin-left: 35px;
+       display: none;
+      }
+      .li-color{
+        background-color: rgb(187, 46, 91);
+      }
+      .li-color:hover{
+        background-color:lightblue;
+      }
+      .navli:hover .li {
+        display: block;
+      }
+      .li-list:hover .li1{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="navli">
+        home
+        <ul class="li">
+          <li class="li-list">home1</li>
+          <li class="li-list">
+            home2
+            <ul class="li1">
+              <li class="li-color">home2.1</li>
+              <li class="li-color">home2.2</li>
+              <li class="li-color">home2.3</li>
+              <li class="li-color">home2.4</li>
+            </ul>
+          </li>
+          <li class="li-list">home3</li>
+        </ul>
+      </li>
+      <li class="navli">page</li>
+      <li class="navli">contact us</li>
+      <li class="navli">help  <ul class="li">
+        <li class="li-list">home1</li>
+        <li class="li-list">
+          home2
+          <ul class="li1">
+            <li class="li-color">home2.1</li>
+            <li class="li-color">home2.2</li>
+            <li class="li-color">home2.3</li>
+            <li class="li-color">home2.4</li>
+          </ul>
+        </li>
+        <li class="li-list">home3</li>
+      </ul></li>
+      <li class="navli">user</li>
+    </ul>
+  </body>
+</html>

@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Button with Hover Effect</title>
     <style>
-        .main{
-            height: 200px;
-            width:200px;
-            border: 2px solid;
-            transition: 0.7s;
-         
-       
+        /* Outer border div */
+        .button-border {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid black;
+            transition: transform 0.3s ease;
+            transform-origin: center;
         }
-    
-        .hover{
-            height: 100px;
-            width: 100px;
-          margin:50%;
-
+        
+        /* Button div */
+        .button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            text-align: center;
         }
-        .hover:hover {
-       
-            background-color: rgb(50, 172, 172);
-           
+        
+        /* Hover effect on the border */
+        .button-border:hover {
+            transform: scale(1.2); /* Only scale the border */
         }
     </style>
 </head>
 <body>
-<div class="main">
-    <div class="hover">h
-    
-    </div>
 
+<div class="button-border">
+    <div class="button">Shop Now</div>
 </div>
+
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 200px;
+        width: 500px;
+        
+        margin: 200px auto;
+        background-color: rgb(20, 88, 147);
+        position: relative;
+        background-image: url(https://images.pexels.com/photos/29187003/pexels-photo-29187003/free-photo-of-couple-strolling-through-a-vibrant-autumn-forest.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load);
+      }
+      .main::before {
+        content: "";
+        height: 0%;
+        width: 0%;
+        background-color: rgb(102, 74, 27);
+        position: absolute;
+        opacity: 0.5;
+        top: 0;
+        transition: 1s;
+        left: 0;
+      }
+      .main::after {
+        content: "";
+        height: 0%;
+        width: 0%;
+        transition: 1s;
+        right: 0;
+        bottom: 0;
+        background-color:  rgb(102, 74, 27);
+        
+        opacity: 0.5;
+        position: absolute;
+      }
+      .main:hover::after {
+        height: 100%;
+        width: 100%;
+      }
+      .main:hover::before{
+        height: 100%;
+            width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main"></div>
+  </body>
+</html>

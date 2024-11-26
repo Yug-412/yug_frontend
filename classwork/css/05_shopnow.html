@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 150px;
+        width: 100px;
+        margin: 200px auto;
+    
+      }
+      .data {
+        height: 30px;
+        width: 100px;
+        border: 2px solid;
+        color: blue;
+        transition: 0.4s;
+     
+      }
+      button {
+        height: 30px;
+        width: 100px;
+        background-color: blue;
+        color: white;
+       transform: translate(2px ,32px) ;
+        
+      }
+      .main:hover .data {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <button>Shop Now</button>
+      <div class="data"></div>
+    </div>
+  </body>
+</html>

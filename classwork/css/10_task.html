@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            margin: 200px auto ;
+            background-color: black;
+        }
+        .first{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            transform: scale(0%);
+            transition: 1s;
+        }
+        .main:hover .first{
+            transform: scale(100%);
+        }
+        .icon{
+            color: red;
+            transform: translate(85px,-115px);
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="main"><div class="first"></div><div class="icon" ><i class="fa fa-shopping-bag" aria-hidden="true"></i></div></div>
+</body>
+</html>

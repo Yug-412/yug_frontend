@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            margin: 200px auto;
+            overflow: hidden;
+            background-image: url(https://images.pexels.com/photos/45853/grey-crowned-crane-bird-crane-animal-45853.jpeg?auto=compress&cs=tinysrgb&w=600);
+        }
+        .left{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transform: translate(100%,-100%);
+            transition: 1s;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .right{
+            height: 200px;
+            width: 200px;
+            border: 2px solid; 
+            transform: translate(-100%,0%);
+            transition: 1s;
+            background-color: rgba(0,0,0,0.3);
+        }
+        .main:hover .left{
+            transform: translate(0%,0%);
+        }
+        .main:hover .right{
+            transform: translate(0%,-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left"> </div>
+            <div class="right"></div>
+       
+    </div>
+</body>
+</html>

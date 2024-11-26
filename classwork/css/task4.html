@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        height: 250px;
+        width: 150px;
+        border: 2px solid;
+        margin: 200px auto;
+        background-color: rgb(138, 90, 221);
+      }
+      .lay {
+        position: relative;
+      }
+      .img {
+        height: 80px;
+        background: url(https://th.bing.com/th?id=OIP.6XOOzJSVcxtMvcEWrsWV4QHaJk&w=219&h=284&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2);
+      
+        transition: 1s;
+        background-size: 100px;
+        background-repeat: no-repeat;
+        margin: 20px 25px;
+      }
+      button {
+        background-color: violet;
+        position: absolute;
+        width: 100px;
+        /* display: none; */
+        opacity: 0;
+        left: 5px;
+        transition: 1s;
+
+        text-align: center;
+        transform: translate(20px, -143px);
+        border: 1px solid black;
+      }
+
+      .cart {
+        height: 20px;
+        text-align: center;
+        margin: 0px 20px;
+        color: rgb(0, 0, 0);
+        background-color: #65e0cb;
+        transform: translate(0px, 22px);
+      }
+      .border {
+        height: 20px;
+        margin: 0px 20px;
+        transform: scale(1);
+        border: 2px solid;
+        color: #65e0cb;
+        transition: 1s;
+      }
+      .box:hover .border {
+        transform: translate(0px, -42px);
+        transform: scale(1.2 );
+      }
+      .lay:hover button {
+        /* display: block; */
+        opacity: 1;
+        transform: translate(20px, -50px);
+      }
+      .lay:hover .img {
+        transform: rotateY(180deg);
+      }
+      .new{
+        color: white;
+        background-color: red;
+        width: 40px;
+       text-align: center;
+     margin: 0px 110px;
+     box-shadow: 2px 2px 5px red;
+
+      }
+      .check{
+        text-align: center;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="new">new</div>
+      <div class="lay">
+        <div class="img"></div>
+        <button>quick view</button>
+      </div>
+      <div class="line">
+        <div class="check">formal blue shirt <br><span style="color: red;">$40.00 /</span ><del> <span style="color: rgb(234, 183, 183);">$80.00</span></del></div>
+        <div class="box">
+          <div class="cart">Add to cart</div>
+          <div class="border"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
