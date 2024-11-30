@@ -1,0 +1,10 @@
+ 1. What is a CSS selector? Provide examples of element, class, and ID selectors
+   Ans =>CSS selectors are used to "find" the HTML elements you want to style. in the  select HTML element selector based on the element name and id is the unique keyword to use of the specific element and class used to  specify the class attributes  
+
+
+2. Explain the concept of CSS specificity. How do conflicts between multiple stylesheets resolved?
+   Ans=> The more specific selector will override the less specific one. Specificity is calculated based on the number of elements, classes, and IDs in the selector. For example, the selector with an ID has a higher specificity than the one with a class, and the one with a class has a higher specificity than the one with an element.
+The order in which stylesheets are linked in the HTML document influences the application of styles. Styles from a stylesheet loaded later can override those from an earlier one. By organizing the order of stylesheet inclusion, you control which styles have priority, helping to manage and resolve conflicts
+
+3. What is the difference between internal, external, and inline CSS? Discuss the advantages and disadvantages of each approach.
+  Ans=> In the attributes CSS is called inline CSS, and after the body tag, the style CSS is called internal. The specific file is chosen in the folder. CSS is called external CSS. mostly use of external CSS because of the less code and proper CSS files and the high importance of the inline tag 
