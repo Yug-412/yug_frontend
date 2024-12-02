@@ -1,0 +1,14 @@
+1. Explain the CSS box model and its components (content, padding, border, 
+margin). How does each affect the size of an element? 
+Ans=> content is the part of the data the user will specifically add to the property.
+ padding is the gap between the content and the border.
+ border is the outer part of the content(div).
+ margin is the outer part of the box or border.
+ box-sizing property used to handle the border, padding, margin, and content in the original space 
+ex=like div size 500px so they divide in the 500px but not out of the border content move
+
+2. What is the difference between border-box and content-box box-sizing in CSS? 
+Which is the default? 
+Ans=> border-box means the background color of the border and content.
+ content-box implies that only the property in the content. 
+ border-box is the default property 
