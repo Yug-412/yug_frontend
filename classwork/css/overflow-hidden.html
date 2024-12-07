@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .panelof {
+        height: 700px;
+        padding: 20px 30px;
+        margin: 20px auto;
+        display: flex;
+      }
+      .image1 {
+        position: relative;
+        height: 700px;
+        width: 40%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        overflow: hidden;
+      }
+      .transform {
+        position: absolute;
+        height: 700px;
+        width: 120%;
+
+        transform: translateX(-100px);
+
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bb1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: 1s;
+      }
+      .forimg {
+        position: relative;
+        width: 60%;
+        height: 700px;
+      }
+      .image1:hover .transform {
+        transform: translateX(-60px);
+      }
+      .image2 {
+        position: relative;
+        height: 330px;
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transform: translateX(80px);
+
+        overflow: hidden;
+      }
+      .transform1 {
+        position: absolute;
+        height: 330px;
+        width: 120%;
+
+        transform: translateX(-100px);
+
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom3.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: 1s;
+      }
+      .image2:hover .transform1 {
+        transform: translateX(-60px);
+      }
+      .image3 {
+        position: relative;
+        height: 330px;
+        width: 90%;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transform: translateX(80px);
+        margin-top: 40px;
+
+        overflow: hidden;
+      }
+      .transform2 {
+        position: absolute;
+        height: 330px;
+        width: 120%;
+
+        transform: translateX(-100px);
+
+        background-image: url(https://p.w3layouts.com/demos_new/template_demo/20-06-2017/elite_shoppy-demo_Free/1660570665/web/images/bottom4.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: 1s;
+      }
+      .image3:hover .transform2 {
+        transform: translateX(-60px);
+      }
+      .border1 {
+        position: absolute;
+        height: 600px;
+        width: 400px;
+        border: 4px solid white;
+        transform: translate(30px, 50px);
+        text-transform: capitalize;
+        text-align: right;
+        opacity: 0;
+        transition: 0.7s;
+      }
+      .disc {
+        font-size: 30px;
+        letter-spacing: 15px;
+        margin-top: 80px;
+        color: aqua;
+      }
+      .txt {
+        position: absolute;
+        transform: translate(350px, 100px);
+        font-size: 30px;
+        color: white;
+      }
+      .border1:hover {
+        opacity: 1;
+        transform: translate(50px, 50px);
+      }
+      .border2 {
+        position: absolute;
+        height: 250px;
+        width: 500px;
+        border: 4px solid white;
+        transform: translate(70px, 40px);
+        text-transform: capitalize;
+        text-align: right;
+        opacity: 0;
+        transition: 0.7s;
+      }
+      .disc2 {
+        font-size: 30px;
+        letter-spacing: 15px;
+        margin-top: 40px;
+        color: aqua;
+      }
+      .txt2 {
+        position: absolute;
+        transform: translate(500px, 50px);
+        font-size: 30px;
+        color: white;
+      }
+      .border2:hover {
+        opacity: 1;
+        transform: translate(90px, 40px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="panelof">
+      <div class="image1">
+        <div class="transform"></div>
+        <div class="txt"><b style="color: red">S</b>ALE</div>
+        <div class="border1"><div class="disc">upto 55%</div></div>
+      </div>
+      <div class="forimg">
+        <div class="image2">
+          <div class="transform1"></div>
+          <div class="txt2"><b style="color: red">S</b>ALE</div>
+          <div class="border2"><div class="disc2">upto 55%</div></div>
+        </div>
+        <div class="image3">
+          <div class="transform2"></div>
+          <div class="txt2"><b style="color: red">S</b>ALE</div>
+          <div class="border2"><div class="disc2">upto 55%</div></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
