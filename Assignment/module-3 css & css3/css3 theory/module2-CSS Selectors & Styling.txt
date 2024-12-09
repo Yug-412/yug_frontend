@@ -7,4 +7,4 @@
 The order in which stylesheets are linked in the HTML document influences the application of styles. Styles from a stylesheet loaded later can override those from an earlier one. By organizing the order of stylesheet inclusion, you control which styles have priority, helping to manage and resolve conflicts
 
 3. What is the difference between internal, external, and inline CSS? Discuss the advantages and disadvantages of each approach.
-  Ans=> In the attributes CSS is called inline CSS, and after the body tag, the style CSS is called internal. The specific file is chosen in the folder. CSS is called external CSS. mostly use of external CSS because of the less code and proper CSS files and the high importance of the inline tag 
+  Ans=> In the attributes CSS is called inline CSS, and after the body tag, the style CSS is called internal. The specific file is chosen in the folder. CSS is called external CSS. mostly use of external CSS because of the less code and proper CSS files and the high importance of the inline CSS
