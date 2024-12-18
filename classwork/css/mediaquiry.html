@@ -1,98 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-  box-sizing: border-box;
-}
+      * {
+        box-sizing: border-box;
+      }
 
-/* Column container */
-.row {  
-  display: flex;
-  flex-wrap: wrap;
-}
+      /* Column container */
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
 
+      /* For mobile phones: */
+      [class*="col-"] {
+        width: 100%;
+      }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
-}
-
-@media only screen and (min-width: 600px) {
-  /* For desktop: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-
-        .one{
-            height: 55px;
-            width: 50%;
-background-color: red;
+      @media only screen and (min-width: 600px) {
+        /* For desktop: */
+        .col-s-1 {
+          width: 8.33%;
         }
-        .two{
-            height: 55px;
-            width: 50%;
-            background-color: yellow;
+        .col-s-2 {
+          width: 16.66%;
         }
-        .row1{
-            display: flex;
-            width: 100%;
-        }.one1{
-            height: 55px;
-            width: 100%;
-background-color: red;
+        .col-s-3 {
+          width: 25%;
         }
-        .two2{
-            height: 55px;
-            width: 100%;
-            background-color: yellow;
+        .col-s-4 {
+          width: 33.33%;
         }
-        .row2{
-          
-            width: 100%;
+        .col-s-5 {
+          width: 41.66%;
         }
-     
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        /* For desktop: */
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+        .col-3 {
+          width: 25%;
+        }
+        .col-4 {
+          width: 33.33%;
+        }
+        .col-5 {
+          width: 41.66%;
+        }
+        .col-6 {
+          width: 50%;
+        }
+        .col-7 {
+          width: 58.33%;
+        }
+        .col-8 {
+          width: 66.66%;
+        }
+        .col-9 {
+          width: 75%;
+        }
+        .col-10 {
+          width: 83.33%;
+        }
+        .col-11 {
+          width: 91.66%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+      }
+
+      .row{
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      
+      .one {
+        height: 55px;
+        /* width: 50%; */
+        background-color: red;
+      }
+      .two {
+        height: 55px;
+        /* width: 50%; */
+        background-color: yellow;
+      }
+      .one1 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: rgb(25, 219, 45);
+      }
+      .two1 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: yellow;
+      }
+      .one2 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: rgb(248, 9, 9);
+      }
+      .two2 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: rgb(3, 43, 245);
+      }
+      .one3 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: rgb(255, 255, 4);
+      }
+      .two3 {
+        height: 55px;
+        /* width: 100%; */
+        background-color: rgb(31, 219, 78);
+      }
     </style>
-</head>
-<body><div class="row">
-    <div class="row1">
-        <div class="one   ">hiiii</div>
-        <div class="two"> my name is yug patel</div>
+  </head>
+  <body>
+      <div class="row">
+        <div class="one col-6  col-s-12">hiiii</div>
+        <div class="two col-6 col-s-12">my name is yug patel</div>
+      </div>
+      <div class="row">
+        <div class="one1 col-3 col-s-6">hiiii</div>
+        <div class="two1 col-3 col-s-6">my name is yug patel</div>
+        <div class="one1 col-3 col-s-6">hiiii</div>
+        <div class="two1 col-3 col-s-6">my name is yug patel</div>
+      </div>
+      <div class="row">
+        <div class="one2 col-6 col-s-12">hiiii</div>
+        <div class="two2 col-6 col-s-12">my name is yug patel</div>
+      </div>
+      <div class="row">
+        <div class="one3 col-12 col-s-12">hiiii</div>
+        <div class="two3 col-12 col-s-12">my name is yug patel</div>
+      </div>
     </div>
-        <div class="row2">
-            <div class="one1">hiiii</div>
-            <div class="two2"> my name is yug patel</div>
-       
-    </div>
-</div>
-</body>
+  </body>
 </html>
