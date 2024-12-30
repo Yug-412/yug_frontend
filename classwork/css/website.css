@@ -1021,3 +1021,7 @@ transform: translateX(0px);
   opacity: 1;
   transform: translate(90px, 40px);
 }
+svg{
+  height: 60px;
+  transform: translateY(400px);
+}
