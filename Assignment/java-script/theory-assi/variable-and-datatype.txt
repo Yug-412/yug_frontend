@@ -1,0 +1,39 @@
+1: What are variables in JavaScript? How do you declare a variable using var, let, and
+const?
+Ans=> three types of variables in JavaScript 1.var 2. let and 3. const
+var variable-name = value; 
+(in the var key, the same name of the variable name is allowed) 
+let variable-name = value; 
+(in the let key, the same name of the variable name is not allowed) 
+const variable-name = value; 
+(it is the use of constant value  so it does not change )
+
+2:Explain the different data types in JavaScript. Provide examples for each.
+
+1. number 
+ex=> var a, b, c;
+     a=10;
+     b=20;
+     c=30;
+2. Boolean 
+
+ex=> true and false 
+
+3. string
+
+ex=> var name="yug"
+
+4. undefined
+
+ex=> console.log(a)
+(a is not defined so that is an undefined datatype)
+
+5 .null
+ 
+ex=> var a= null;(it's means  that value is null)     
+
+
+3. What is the difference between undefined and null in JavaScript?
+
+Ans=> undefined means that the id variable not defined in the code and calls that variable that shows the undefined datatype and null means that the value is null in the variable .
+

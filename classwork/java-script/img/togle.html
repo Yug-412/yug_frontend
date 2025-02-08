@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .stylesheet{
+            height:100px ;
+            width: 100%;
+            background-color: red;
+            color: blue;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="h1">hello my name is yug </h1>
+    <button onclick="add()">add </button>
+    <button onclick="remove()">remove </button>
+    <button onclick="togle()">togle</button>
+    <script>
+             let h1_tag= document.getElementById("h1")
+        function add(){
+       h1_tag.classList.add("stylesheet")
+
+        }
+        function remove(){
+       h1_tag.classList.remove("stylesheet")
+
+        }
+        function togle(){
+       h1_tag.classList.toggle("stylesheet")
+
+        }
+    </script>
+</body>
+</html>

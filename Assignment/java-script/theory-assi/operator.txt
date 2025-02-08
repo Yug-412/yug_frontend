@@ -1,0 +1,15 @@
+1. What are the different types of operators in JavaScript? Explain with examples.
+• Arithmetic operators
+• Assignment operators
+• Comparison operators
+• Logical operators
+
+Ans=> arithmetic operator (+ , - , * , / , % ) 
+      assignment operator (=)
+      comparison operator (< , > , <= , >= , != , == , === )
+      logical operator    ( && , || , ! )
+
+
+2.What is the difference between == and === in JavaScript?
+
+Ans=> (==) is the check the value in the JavaScript and (===) is the check the value and datatype in the JavaScript.

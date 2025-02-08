@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 30px;
+        margin-bottom: 8px;
+      }
+      .main {
+        background-color: aquamarine;
+        width: 40%;
+        height: auto;
+        /* padding: 20px 20px 20px 20px; */
+      }
+      h1{height: 10px;
+        background-color: aquamarine;
+      }
+      input {
+       
+       
+        margin-top: 5px;
+      }
+      .operator button {
+        height: 20px;
+        margin-bottom: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <form action=""> -->
+        <div class="main"> 
+      <!-- <input type="text" name="" id="num1" placeholder="enter a number.." /> -->
+    
+      <!-- <input type="text" name="" id="num2" placeholder="enter a number.." /><br /> -->
+      <h1 id="h1"></h1>
+      <br />
+      <div style="display: flex">
+        <div style="width: 70%; text-align: center">
+          <button  id="one" value="1" onclick="cal('one')">1</button>
+          <button  id="two" value="2" onclick="cal('two')">2</button>
+          <button id="three" value="3" onclick="cal('three')">3</button>
+          <button  id="four" value="4" onclick="cal('four')">4</button>
+          <button id="five" value="5" onclick="cal('five')">5</button>
+          <button  id="six" value="6" onclick="cal('six')">6</button>
+          <button  id="seven" value="7" onclick="cal('seven')">7</button>
+          <button  id="eight" value="8" onclick="cal('eight')">8</button>
+          <button  id="nine" value="9" onclick="cal('nine')">9</button>
+          <button  id="c" value="0" onclick="cal('c')">C</button>
+          <button  id="zero" value="0" onclick="cal('zero')">0</button>
+          <button  id="dott" value="3" onclick="cal('')">.</button>
+        </div>
+        <div class="operator" style="width: 30%; text-align: center">
+          <button >+</button> <br />
+          <button >-</button><br />
+          <button >*</button><br />
+          <button >/</button><br />
+          <button >=</button><br />
+        </div>
+      </div>
+    <!-- </form> -->
+     </div>
+    <script>
+      function cal(a){
+        // console.log(1)
+        let val =  document.getElementById(a).value += value;
+        
+        
+        document.getElementById("h1").innerHTML= val
+
+      }
+   
+    
+    </script>
+  </body>
+</html>

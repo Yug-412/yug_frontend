@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .calculator {
+        height: 200px;
+        margin: 150px auto;
+        align-items: center;
+        width: 200px;
+        background-color: rgba(119, 181, 236, 0.5);
+        padding: 10px 30px 30px 30px;
+        border-radius: 5%;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 5px;
+        border: none;
+      }
+      input {
+        margin-bottom: 10px;
+        height: 20px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input  type="text" name="" id="inp" />
+
+      <div class="buttons">
+        <button onclick="cal('7')">7</button>
+        <button onclick="cal('8')">8</button>
+        <button id="nine" value="9" onclick="cal('9')">9</button>
+        <button onclick="cal('+')">+</button>
+
+        <button id="four" value="4" onclick="cal('4')">4</button>
+        <button id="five" value="5" onclick="cal('5')">5</button>
+        <button id="six" value="6" onclick="cal('6')">6</button>
+        <button onclick="cal('-')">-</button>
+
+        <button id="one" onclick="cal(1)">1</button>
+        <button id="two" value="2" onclick="cal('2')">2</button>
+        <button id="three" value="3" onclick="cal('3')">3</button>
+        <button onclick="cal('*')">*</button>
+
+        <button
+        onclick="clearInterval()" style="background-color: red; border: 1px solid grey"
+          
+        >
+          C
+        </button>
+        <button id="zero" value="0" onclick="cal('0')">0</button>
+        <button id="dott"  onclick="cal('')">.</button>
+        <button onclick="cal('/')">/</button>
+      </div>
+      <button
+        style="
+          float: right;
+          width: 50px;
+          background-color: rgb(65, 239, 65);
+          border: 1px solid grey;
+          border-radius: 10px;
+          margin: 5px;
+        "
+      >
+        =
+      </button>
+    </div>
+    <script>
+      function cal(value) {
+        // console.log(1)
+        let  = (document.getElementById("inp").value += value);
+        // console.log(val)
+
+        // document.getElementById("inp").innerHTML= val
+      }
+      function clearInterval() {
+       let clear= (document.getElementById("inp") .value = "")
+      }
+    </script>
+  </body>
+</html>
