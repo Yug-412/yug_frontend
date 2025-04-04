@@ -1,0 +1,8 @@
+1.What are props in React.js? How are props different from state?
+Ans: In React, props are a mechanism used to pass data from a parent component to a child component.
+
+2. Explain the concept of state in React and how it is used to manage component data.
+Ans: State is a fundamental concept used to manage dynamic data in components. and use to change the data using of set data.
+
+3.Why is this.setState() used in class components, and how does it work?
+Ans: (this.setState()) is used in class components to update the component's state, in this  inherited by every class component.When you want to change the state in a class component, you must use this.setState()

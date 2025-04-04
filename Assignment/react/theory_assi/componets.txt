@@ -1,0 +1,12 @@
+1.: What are components in React? Explain the difference between functional
+components and class components.
+Ans: Components are the building blocks of the user interface 
+     Functional: in this data direct pass in the return section using parent div 
+     Class: in this using extend components and must have a render() method that returns the UI.
+
+
+2.: How do you pass data to a component using props?
+Ans: Props means using a data read in the another components using as components parameter and pass in the return 
+
+3. What is the role of render() in class components?
+Ans: The render() method must be present in every class component and use to re-render  components 
