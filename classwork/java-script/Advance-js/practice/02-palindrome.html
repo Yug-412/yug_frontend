@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function palindrome(str){
+            
+             newstr =str.split("").reverse().join("")
+             return str === newstr;
+       
+            // if(str === newstr){
+            //     console.log("string is palindrome")
+            // }
+            // else
+            // {
+            //     console.log("string is not palindrome")
+            // }
+        }
+       console.log(palindrome("mom"))
+    </script>
+</body>
+</html>

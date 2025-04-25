@@ -8,6 +8,8 @@ import Home from './Routing/Home';
 import About from './Routing/About';
 import Contact from './Routing/Contact';
 import 'font-awesome/css/font-awesome.min.css';
+import Counter from './Hooks/Counter';
+import Apifetch from './Hooks/Apifetch';
 
 
 
@@ -16,14 +18,16 @@ function App() {
     <div className="App">
       {/* <Navbar/>
       <Footer/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
 
-      </BrowserRouter>
+      </BrowserRouter> */}
+      {/* <Counter/> */}
+      <Apifetch/>
     </div>
   );
 }

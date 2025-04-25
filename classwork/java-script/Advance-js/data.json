@@ -1,0 +1,46 @@
+{
+    "user":[
+        {
+            "id":1,
+            "name":"yug patel",
+            "cource":"front-end"
+        },
+        {
+            "id":2,
+            "name":"vraj patel",
+            "cource":"front-end"
+        },
+        {
+            "id":3,
+            "name":"dharmik patel",
+            "cource":"front-end"
+        },
+        {
+            "id":4,
+            "name":"raj patel",
+            "cource":"front-end"
+        },
+        {
+            "id":5,
+            "name":"prasad patel",
+            "cource":"front-end"
+        }
+    ],
+    "admin":[
+        {
+            "id":1,
+            "name":"prem patel",
+            "cource":"front-end"
+        },
+        {
+            "id":2,
+            "name":"yaj patel",
+            "cource":"front-end"
+        },
+        {
+            "id":3,
+            "name":"premal patel",
+            "cource":"front-end"
+        }
+    ]
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    
+    <script>
+
+let str = "aabaabcdddddd";
+let countMap = {};  // Object to store counts of each character
+
+// Count the occurrences of each character
+for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    countMap[char] = (countMap[char] || 0) + 1;
+}
+console.log(countMap)
+for (let key in countMap){
+    document.write(`${key}: ${countMap[key]}`)
+} 
+// document.querySelector("h1").innerHTML=({countMap})
+
+
+// let result = '';
+
+// // Build the result string
+// for (let char in countMap) {
+//     result += char + countMap[char];
+// }
+
+// console.log(result);  // Output: a4b1c1d6
+
+// let str ="aabaabcdddddd"
+//         let count=1;
+//         let result =''
+
+//         for(let i=0;i<str.length;i++){
+//             if(str[i]==str[i+1]){
+//                 count++;
+//             }
+//             else{
+//                 result=result+str[i]+ count;
+//                 count=1;
+//             }
+//         }
+//         console.log(result)
+    </script>
+</body>
+</html>

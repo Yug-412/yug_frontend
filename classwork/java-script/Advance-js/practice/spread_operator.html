@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <script>
+        // let name ='yug' //primitive callstack
+        // let name1 = name;
+        // name1 = 'Dhruvil'
+        // console.log(name)
+        // console.log(name1)
+        // obj1 = {
+        //     name:'yug',
+        //     age:22,
+        //     skill:'Developer',
+        //     obj3 :{}
+        // }
+        // obj2 = {...obj1}; //non-primitive data callstack 
+        // obj2.name = 'Dhruvil'
+        // console.log(obj2)
+        // console.log(JSON.stringify(obj1))
+
+        function fullName(...args){
+            console.log(args)
+            console.log(`My name is`)
+
+        }
+        fullName(26,'divyang','dhruvil',34)
+
+    </script>
+</body>
+</html>
