@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Aheader from '../Acoman/Aheader'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Acource() {
 
@@ -26,9 +27,13 @@ function Acource() {
         time: "",
         desc: ""
     })
-
+    const redirect= useNavigate()
 
     useEffect(() => {
+
+              if(!localStorage.getItem("Aname")){
+            redirect('/alogin')
+        }
         fetchdata()
     }, [])
 

@@ -1,7 +1,68 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify';
+
+
 
 function Header() {
+  useEffect(() => {
+    const id = localStorage.getItem("id");
+    if (id) {
+        getdata(id);
+    }
+}, []);
+
+const changedata=(e)=>{
+    setdata(
+       {
+         ...data,
+        [e.target.name]:e.target.value
+       }
+      
+    )
+     console.log(data)
+}
+ 
+    const [data, setdata] = useState({
+        name: "",
+        email: "",
+        img: ""
+    })
+
+    const getdata = async (id) => {
+        const res = await axios.get(`http://localhost:3000/user/${id}`)
+        setdata(res.data)
+        console.log(res.data)
+    }
+
+
+   const updatedata = async (id) => {
+    try {
+        const res = await axios.put(`http://localhost:3000/user/${id}`, data);
+        setdata(res.data);
+        toast.success("Data updated successfully");
+    } catch (error) {
+        console.error("Update error:", error);
+        toast.error("Failed to update data");
+    }
+};
+
+    const redirect = useNavigate()
+
+    const loginpage = () => {
+        redirect('/login')
+    }
+    const registerpage = () => {
+        redirect("/register")
+    }
+    const logout = () => {
+
+        localStorage.removeItem("id")
+        localStorage.removeItem("name")
+        redirect("/")
+    }
+
     return (
         <div>
 
@@ -31,8 +92,29 @@ function Header() {
                                 <div className="col-lg-4 text-center text-lg-end">
                                     <div className="d-flex justify-content-end">
                                         <div className="d-flex align-items-center small">
-                                            <a href="#" className="login-btn text-body me-3 pe-3"> <span>Login</span></a>
-                                            <a href="#" className="text-body me-3"> Register</a>
+
+                                            {
+                                                (() => {
+                                                    if (localStorage.getItem("id")) {
+                                                        return (
+                                                            <>
+                                                                <a className="login-btn text-body me-3 pe-1"> <span >Hello {localStorage.getItem("name")}</span></a>
+                                                                <a onClick={logout} className="login-btn text-body me-3 pe-1"> <span > logout</span></a>
+
+                                                            </>
+                                                        )
+                                                    }
+                                                    else {
+                                                        return (
+                                                            <> <a onClick={loginpage} className="login-btn text-body me-3 pe-1"> <span >login</span></a>
+                                                                <a onClick={registerpage} className="login-btn text-body me-3 pe-1"> <span  > register</span></a></>
+                                                        )
+                                                    }
+                                                })()
+
+
+                                            }
+
                                         </div>
                                         <div className="d-flex pe-3">
                                             <a className="btn p-0 text-primary me-3" href="#"><i className="fab fa-facebook-f" /></a>
@@ -40,7 +122,9 @@ function Header() {
                                             <a className="btn p-0 text-primary me-3" href="#"><i className="fab fa-instagram" /></a>
                                             <a className="btn p-0 text-primary me-0" href="#"><i className="fab fa-linkedin-in" /></a>
                                         </div>
+
                                     </div>
+                                    { }
                                 </div>
                             </div>
                         </div>
@@ -58,24 +142,41 @@ function Header() {
                                         <NavLink to='/' className="nav-item nav-link ">Home</NavLink>
                                         <NavLink to='/about' className="nav-item nav-link">About</NavLink>
                                         <NavLink to='/course' className="nav-item nav-link">Courses</NavLink>
-                                        <NavLink  to='/blog' className="nav-item nav-link">Blogs</NavLink>
+                                        <NavLink to='/blog' className="nav-item nav-link">Blogs</NavLink>
                                         <div className="nav-item dropdown">
                                             <a href="#" className="nav-link" data-bs-toggle="dropdown">
                                                 <span className="dropdown-toggle">Pages</span>
                                             </a>
                                             <div className="dropdown-menu">
-                                                <NavLink to='/feature'  className="dropdown-item">Our Features</NavLink>
+                                                <NavLink to='/feature' className="dropdown-item">Our Features</NavLink>
                                                 <NavLink to='/team' className="dropdown-item">Our team</NavLink>
-                                                <NavLink  to='/test' className="dropdown-item">Testimonial</NavLink>
-                                        
+                                                <NavLink to='/test' className="dropdown-item">Testimonial</NavLink>
+
                                             </div>
                                         </div>
                                         <NavLink to='/contact' className="nav-item nav-link">Contact</NavLink>
                                         <div className="nav-btn ps-3">
-                                            <button className="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0" data-bs-toggle="modal" data-bs-target="#searchModal"><i className="fas fa-search" /></button>
-                                            <a href="#" className="btn btn-primary py-2 px-4 ms-0 ms-lg-3"> <span>Get Quote</span></a>
+                                            <button
+                                                className="btn-search btn btn-primary btn-md-square mt-2 mt-lg-0 mb-4 mb-lg-0 flex-shrink-0"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#searchModal"
+                                            >
+                                                <i className="fas fa-search" />
+                                            </button>
+
+                                            {localStorage.getItem("id") ? (
+                                                <a data-bs-toggle="modal" data-bs-target="#exampleModal3" className="btn btn-primary py-2 px-4 ms-0 ms-lg-3  " >
+                                                    <span  >Profile</span>
+                                                </a>
+                                            ) : (
+                                                <a className="btn btn-primary py-2 px-4 ms-0 ms-lg-3">
+                                                    <span>Get Quote</span>
+                                                </a>
+                                            )}
                                         </div>
+
                                         <div className="nav-shaps-1" />
+
                                     </div>
                                 </div>
                             </nav>
@@ -85,8 +186,61 @@ function Header() {
             </div>
 
             {/* <!-- Navbar & Hero End --> */}
+
+
+            {
+                // <!-- Modal -->
+                <div className="modal fade" id="exampleModal3" tabIndex={-1} aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header bg-info ">
+                                <h1 className="modal-title " id="exampleModalLabel">profile</h1>
+                                <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                            </div>
+                            <div className="modal-body">
+
+                                <form>
+                                    <div className="row py-3">
+
+                                        <div className="form-group col-6 ">
+                                            <label htmlFor="">name</label>
+                                            <input type="text" name='name'  onChange={changedata} value={data.name} className="form-control" id="inputname1" placeholder="name" />
+                                        </div>
+
+                                        <div className="form-group col-6">
+                                            <label htmlFor="exampleInputEmail1">Email address</label>
+                                            <input type="email" name='email' onChange={changedata} value={data.email} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+
+                                        </div>
+                                    </div>
+                                    <div className="form-group py-2 ">
+                                        <label htmlFor="">iamge</label>
+                                        <input type="url" name='img'  onChange={changedata} value={data.img} className="form-control" id="inputname1" placeholder="url" />
+                                    </div>
+
+
+
+                                </form>
+
+                            </div>
+                            <div className="modal-footer">
+                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" className="btn btn-primary" onClick={()=>updatedata(localStorage.getItem("id"))}>Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            }
         </div>
     )
 }
 
 export default Header
+
+
+
+
+
+
+

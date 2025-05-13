@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Aheader from '../Acoman/Aheader'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Acontact() {
 
@@ -15,6 +16,16 @@ function Acontact() {
         time:"",
         desc:""
     },[])
+        const redirect= useNavigate()
+
+    useEffect(() => {
+
+              if(!localStorage.getItem("Aname")){
+            redirect('/alogin')
+        }
+       
+    }, [])
+
 
     const dataOnsubmit= async(e)=>{
         e.preventDefault()

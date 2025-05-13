@@ -4,14 +4,14 @@ import { NavLink, useNavigate } from 'react-router-dom'
 function Aheader() {
     const redirect = useNavigate()
     const logout = () => {
-        localStorage.removeItem("id")
-        localStorage.removeItem("name")
+        localStorage.removeItem("Aid")
+        localStorage.removeItem("Aname")
         redirect('/alogin')
     }
 
     useEffect(() => {
-        if (!localStorage.getItem("id")) {
-            redirect("/alogin")
+        if (!localStorage.getItem("Aid")) {
+            redirect("/dash")
         }
     })
 
@@ -46,10 +46,10 @@ function Aheader() {
                                         <div className="d-flex align-items-center small">
                                             {
                                                 (() => {
-                                                    if (localStorage.getItem("id")) {
+                                                    if (localStorage.getItem("Aid")) {
                                                         return (
                                                             <>
-                                                                <a href="#" className="login-btn text-body me-3 pe-3"> <span>Hello {localStorage.getItem("name")}</span></a>
+                                                                <a className="login-btn text-body me-3 pe-1"> <span >Hello {localStorage.getItem("Aname")}</span></a>
 
                                                             </>
                                                         )
@@ -60,7 +60,7 @@ function Aheader() {
                                             }
                                             {
                                                 (() => {
-                                                    if (localStorage.getItem("id")) {
+                                                    if (localStorage.getItem("Aid")) {
                                                         return (
                                                             <>
                                                                 <a onClick={logout} className="login-btn text-body me-3 pe-3"> <span>Logout</span></a>

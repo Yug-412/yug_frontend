@@ -1,7 +1,7 @@
 import React from 'react'
-import Card_map from './card-api-fetch/Card_map'
-import Header from './Layout/Header'
-import Fotter from './Layout/Fotter'
+// import Card_map from './card-api-fetch/Card_map'
+// import Header from './Layout/Header'
+// import Fotter from './Layout/Fotter'
 import Home from './Layout/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import About from './Layout/About'
@@ -53,6 +53,7 @@ function App() {
 
   </>
   </BrowserRouter>
+ 
 
   )
 }

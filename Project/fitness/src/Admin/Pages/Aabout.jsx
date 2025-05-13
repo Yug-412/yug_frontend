@@ -1,10 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import Aheader from '../Acoman/Aheader'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 // import axios from 'axios'
 
 
 function Aabout() {
+
+        const redirect= useNavigate()
+
+    useEffect(() => {
+
+              if(!localStorage.getItem("Aname")){
+            redirect('/alogin')
+        }
+      
+    }, [])
+
 
     useEffect(()=>{
         teamdata();

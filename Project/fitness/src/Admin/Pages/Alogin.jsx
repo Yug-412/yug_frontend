@@ -6,7 +6,7 @@ import { toast } from 'react-toastify'
 function Alogin() {
 
     useEffect(()=>{
-        if(localStorage.getItem("name")){
+        if(localStorage.getItem("Aname")){
             redirect('/dash')
         }
     })
@@ -56,15 +56,15 @@ function Alogin() {
             }
           
 
-            localStorage.setItem("id",admin.id)
-            localStorage.setItem("name",admin.name)
+            localStorage.setItem("Aid",admin.id)
+            localStorage.setItem("Aname",admin.name)
             redirect('/dash')
             toast.success("login succesfull")
 
 
         } catch (error) {
             toast.error("Api is not  fetch..!", error)
-            console.log("Api is not  fetch..!", error)
+            console.log("Api doesn't  fetch..!", error)
         }
     }
     return (

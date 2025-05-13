@@ -1,12 +1,19 @@
 import React, { use, useEffect, useState } from 'react'
 import Aheader from '../Acoman/Aheader'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 function Adash() {
 
     const [data, setdata] = useState([])
 
+    const redirect= useNavigate()
+
     useEffect(() => {
+
+         if(!localStorage.getItem("Aname")){
+            redirect('/alogin')
+        }
         fetchdata()
     }, [])
 

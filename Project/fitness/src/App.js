@@ -16,6 +16,9 @@ import Acource from "./Admin/Pages/Acource";
 import Alogin from "./Admin/Pages/Alogin";
 import { ToastContainer } from "react-toastify";
 import Aabout from "./Admin/Pages/Aabout";
+import Login from "./Comman/Login";
+import Register from "./Comman/Register";
+
 
 function App() {
   return (
@@ -30,6 +33,8 @@ function App() {
           <Route path="/feature" element={<Feature />} />
           <Route path="/team" element={<Team />} />
           <Route path="/test" element={<Test />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
           <Route path="*" element={<Error />} />
 
           <Route path="/dash" element={<Adash />} />

@@ -37,6 +37,14 @@
       "password": "123456",
       "img": "https://images.pexels.com/photos/2325447/pexels-photo-2325447.jpeg?auto=compress&cs=tinysrgb&w=600",
       "status": "unblock"
+    },
+    {
+      "id": "1746777281816",
+      "name": "YUG",
+      "email": "yug@gmail.com",
+      "password": "4122",
+      "img": "https://static.vecteezy.com/system/resources/previews/018/795/372/original/fitness-and-gym-logo-free-png.png",
+      "status": "unblock"
     }
   ],
   "cource": [
