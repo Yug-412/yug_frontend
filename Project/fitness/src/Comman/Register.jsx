@@ -29,6 +29,7 @@ function Register() {
     setdata({
       ...data,
       id: new Date().getTime().toString(),
+      
       status: "unblock",
       [e.target.name]: e.target.value
     })

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Country & City Selector</title>
+  </head>
+  <body>
+    <h2>Select Country and City</h2>
+
+    <label>Country:</label>
+    <select id="country">
+      <option value="">--Select Country--</option>
+    </select>
+
+    <label>City:</label>
+    <select id="city">
+      <option value="">--Select City--</option>
+    </select>
+
+    <script>
+      const countries = {
+        India: ["Delhi", "Mumbai", "Bangalore"],
+        USA: ["New York", "Los Angeles", "Chicago"],
+        Japan: ["Tokyo", "Osaka", "Kyoto"],
+      };
+
+      const selectCountry = document.getElementById("country");
+      const selectCity = document.getElementById("city");
+
+      for (let contry in countries) {
+        const option = document.createElement("option");
+        option.innerHTML = contry;
+        //   option.value=contry
+        selectCountry.appendChild(option);
+      }
+
+      selectCountry.addEventListener("change", function () {
+        const countrySelect = this.value;
+        console.log(countries)
+        selectCity.innerHTML = `<option value="">--Select the City--</option>`;
+
+        if (countrySelect && countries[countrySelect]) {
+          countries[countrySelect].forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city;
+            option.innerHTML = city;
+            selectCity.appendChild(option);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

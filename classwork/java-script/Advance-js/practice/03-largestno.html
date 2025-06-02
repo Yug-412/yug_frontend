@@ -8,16 +8,19 @@
 <body>
     
     <script>
-       function largestno(arr){
-      let max=arr[0];
-      for(let i=0;i<=arr.length;i++){
+   function max(arr){
+     let max=arr[0]
+
+     for(let i=0;i<=arr.length;i++){
         if(arr[i]>max){
-            max=arr[i];
+            max =arr[i];
         }
-      }
-return max;
-       }
-       console.log(largestno([1,2,5,384,65,374]))
+         
+     }
+      return max;
+   
+   }
+       console.log(max([10,20,5,384,65,394]))
     </script>
 </body>
 </html>
