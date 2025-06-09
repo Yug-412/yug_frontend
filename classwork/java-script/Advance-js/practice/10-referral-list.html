@@ -37,7 +37,7 @@
       selectCountry.addEventListener("change", function () {
         const countrySelect = this.value;
         console.log(countries)
-        selectCity.innerHTML = `<option value="">--Select the City--</option>`;
+        selectCity.innerHTML = `<option value="">--Select City--</option>`;
 
         if (countrySelect && countries[countrySelect]) {
           countries[countrySelect].forEach((city) => {
