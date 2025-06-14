@@ -21,17 +21,28 @@ function Contact() {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            await axios.post("http://localhost:3000/contacts", data); // Adjust API endpoint accordingly
-            toast.success("Message sent successfully!");
-            setData({ name: "", email: "", sub: "", desc: "" }); // reset form
-        } catch (err) {
-            console.error("Error sending data:", err);
-            toast.error("Failed to send message.");
-        }
-    };
+ const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+        // Only include the required fields, NOT the id
+        const { name, email, sub, desc } = data;
+
+        await axios.post("http://localhost:3000/contacts", {
+            name,
+            email,
+            sub,
+            desc
+        });
+
+        toast.success("Message sent successfully!");
+        setData({ name: "", email: "", sub: "", desc: "" });
+    } catch (err) {
+        console.error("Error sending data:", err);
+        toast.error("Failed to send message.");
+    }
+};
+
+
 
     return (
         <div>

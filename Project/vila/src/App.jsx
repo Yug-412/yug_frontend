@@ -8,6 +8,7 @@ import ScrollToTop from './ScrollToTop';
 
 import Ahome from './admin/Ahome';
 import Login from './admin/Login';
+import Inquiry from './admin/inquiry';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -22,6 +23,8 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
     <Route path='/admin' element={<Ahome />} />
+        <Route path='/user' element={<Inquiry />} />
+    
       </Routes>
     </BrowserRouter>
   );

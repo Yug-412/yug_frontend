@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Ahome.css'; // Optional: for custom styling
+import Anav from './Anav';
 
 function Ahome() {
   const [properties, setProperties] = useState([]);
@@ -76,6 +77,8 @@ function Ahome() {
   };
 
   return (
+    <>
+    <Anav/>
     <div className="container my-4">
       <h2 className="mb-4">Admin Property Dashboard</h2>
       <button className="btn btn-primary mb-3" onClick={() => openModal()}>Add Property</button>
@@ -184,7 +187,9 @@ function Ahome() {
         </div>
       )}
     </div>
+    </>
   );
+
 }
 
 export default Ahome;

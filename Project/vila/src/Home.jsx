@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './coman/Navbar'
 import Footer from './coman/Footer'
 import Head from './coman/Head'
@@ -6,7 +6,7 @@ import { Helmet } from 'react-helmet'
 
 function Home() {
 
-    
+
 
     useEffect(() => {
         if (window.$ && window.$('.owl-banner').owlCarousel) {
@@ -21,6 +21,32 @@ function Home() {
             });
         }
     }, []);
+    const [data, setData] = useState({
+        name: "",
+        email: "",
+        sub: "",
+        desc: ""
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setData((prev) => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post("http://localhost:3000/contacts", data); // Adjust API endpoint accordingly
+            toast.success("Message sent successfully!");
+            setData({ name: "", email: "", sub: "", desc: "" }); // reset form
+        } catch (err) {
+            console.error("Error sending data:", err);
+            toast.error("Failed to send message.");
+        }
+    };
     return (
         <>
             <Head />
@@ -449,39 +475,45 @@ function Home() {
                                 </div>
                             </div>
                             <div className="col-lg-5">
-                                <form id="contact-form" action method="post">
-                                    <div className="row">
-                                        <div className="col-lg-12">
+                                <form id="contact-form" onsubmit={handleSubmit}>
+                                    <div classname="row">
+                                        <div classname="col-lg-12">
                                             <fieldset>
-                                                <label htmlFor="name">Full Name</label>
-                                                <input type="name" name="name" id="name" placeholder="Your Name..." autoComplete="on" required />
+                                                <label htmlfor="name">Full Name</label>
+                                                <input type="text" name="name" id="name" defaultvalue={data.name} onchange={handleChange} placeholder="Your Name..." autoComplete="on" required />
+                                            </fieldset>
+                                        </div>
+                                        <div classname="col-lg-12">
+                                            <fieldset>
+                                                <label htmlfor="email">Email Address</label>
+                                                <input type="email" name="email" id="email" defaultvalue={data.email} onchange={handleChange} placeholder="Your E-mail..." required />
+                                            </fieldset>
+                                        </div>
+                                        <div classname="col-lg-12">
+                                            <fieldset>
+                                                <label htmlfor="sub">Subject</label>
+                                                <input type="text" name="sub" id="sub" defaultvalue={data.sub} onchange={handleChange} placeholder="Subject..." autoComplete="on" />
                                             </fieldset>
                                         </div>
                                         <div className="col-lg-12">
                                             <fieldset>
-                                                <label htmlFor="email">Email Address</label>
-                                                <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required />
-                                            </fieldset>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <fieldset>
-                                                <label htmlFor="subject">Subject</label>
-                                                <input type="subject" name="subject" id="subject" placeholder="Subject..." autoComplete="on" />
-                                            </fieldset>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <fieldset>
-                                                <label htmlFor="message">Message</label>
-                                                <textarea name="message" id="message" placeholder="Your Message" defaultValue={""} />
-                                            </fieldset>
-                                        </div>
-                                        <div className="col-lg-12">
-                                            <fieldset>
-                                                <button type="submit" id="form-submit" className="orange-button">Send Message</button>
-                                            </fieldset>
+                                                <label htmlfor="desc">Message</label>
+                                                <textarea name="desc" id="desc" value={data.desc} onchange={handleChange} placeholder="Your Message"  /></fieldset>
+
+
+
+                                            <div className="col-lg-12">
+                                                <fieldset>
+                                                    <button type="submit" id="form-submit" className="orange-button">
+                                                        Send Message
+                                                    </button>
+                                                </fieldset>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
+
+
                             </div>
                         </div>
                     </div>
